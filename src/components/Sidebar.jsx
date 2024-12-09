@@ -22,26 +22,12 @@ const Sidebar = () => {
           <div className="bg-purple-100 dark:bg-purple-900 p-2 rounded-full">
             <LayoutDashboard className="text-purple-600 dark:text-purple-400 w-6 h-6" />
           </div>
-          <h1 className="text-purple-600 dark:text-purple-400 font-bold text-lg">Controsepticon</h1>
+          <h1 className="text-purple-600 dark:text-purple-400 font-bold text-lg">XYZ</h1>
         </div>
 
         {/* Menu Items */}
         <ul className="space-y-6">
-          <li>
-            <NavLink
-              to="/dashboard/emailform"
-              className={({ isActive }) =>
-                `flex items-center gap-3 text-sm font-medium p-3 rounded-lg ${
-                  isActive
-                    ? "text-purple-600 bg-purple-100 dark:text-purple-400 dark:bg-purple-800"
-                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                }`
-              }
-            >
-              <Mails className="w-5 h-5" />
-              Spoof Emailer
-            </NavLink>
-          </li>
+
           <li>
             <NavLink
               to="/dashboard/spoofchecker"
@@ -57,56 +43,12 @@ const Sidebar = () => {
               Spoof Checker
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/dashboard/sendouts"
-              className={({ isActive }) =>
-                `flex items-center gap-3 text-sm font-medium p-3 rounded-lg ${
-                  isActive
-                    ? "text-purple-600 bg-purple-100 dark:text-purple-400 dark:bg-purple-800"
-                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                }`
-              }
-            >
-              <Send className="w-5 h-5" />
-              Sendouts
-            </NavLink>
-          </li>
+
         </ul>
 
         <div className="border-t my-6 border-gray-200 dark:border-gray-700"></div>
 
         <ul className="space-y-6">
-          <li>
-            <NavLink
-              to="/dashboard/emaillogs"
-              className={({ isActive }) =>
-                `flex items-center gap-3 text-sm font-medium p-3 rounded-lg ${
-                  isActive
-                    ? "text-purple-600 bg-purple-100 dark:text-purple-400 dark:bg-purple-800"
-                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                }`
-              }
-            >
-              <Logs className="w-5 h-5" />
-              Email Logs
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/dashboard/apimanagement"
-              className={({ isActive }) =>
-                `flex items-center gap-3 text-sm font-medium p-3 rounded-lg ${
-                  isActive
-                    ? "text-purple-600 bg-purple-100 dark:text-purple-400 dark:bg-purple-800"
-                    : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                }`
-              }
-            >
-              <Waypoints className="w-5 h-5" />
-              API
-            </NavLink>
-          </li>
           <li>
             <NavLink
               to="/settings"

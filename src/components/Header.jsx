@@ -25,7 +25,7 @@ const Header = () => {
         {/* Left Section */}
         <div className="flex items-center gap-4">
           <h1 className="text-gray-600 dark:text-gray-300 font-medium text-lg">
-            Hello <span className="text-purple-600">Harsh,</span>
+            Hello <span className="text-purple-600">User,</span>
           </h1>
         </div>
 

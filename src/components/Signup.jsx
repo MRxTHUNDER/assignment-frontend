@@ -8,34 +8,10 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
-  
-    const handleSubmit = async (e) => {
-    //   e.preventDefault();
-    //   try {
-    //     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-    //     const user = userCredential.user;
-        
-    //     const userRef=ref(realTimedb,"Demo_Interview_Candidates/"+user.uid)
-    //     await set(userRef,{
-    //       name:name,
-    //       dob:dob,
-    //       email:email,
-    //       uid:user.uid
-    //     })
-        
-    //     // Redirect to the dashboard
-    //     navigate('/DemoDashboard/DemoGetStarted'); 
-    //   } catch (error) {
-    //     if (error instanceof Error) {
-    //       setError(error.message);
-    //     } else {
-    //       setError('An unknown error occurred.');
-    //     }
-    //   }
-    };
-    
-    
-  
+
+
+
+
     return (
       <div className="flex h-screen items-center justify-center bg-gray-100">
         
@@ -44,18 +20,15 @@ const Signup = () => {
           <div className="w-svw p-8">
             <div className="mb-6">
               {/* <img src={Logo} alt="FirstList" className="w-25 h-12 mb-4" /> */}
-              <h1 className="text-4xl font-bold pb-8">
-  <span className="text-purple-400">CONTRO</span>
-  <span className="text-gray-800">SEPTICON</span>
-</h1>
+
 
               <h2 className="text-3xl font-bold mb-2">Sign up</h2>
-              <p className="text-gray-500">Sign up to enjoy the features of ControSepticon</p>
+              <p className="text-gray-500">Sign up to enjoy the features</p>
             </div>
   
             {error && <p className="text-red-500">{error}</p>}
   
-            <form className="space-y-4" onSubmit={handleSubmit}>
+            <form className="space-y-4" >
               {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-gray-700">Your Name</label>
@@ -112,15 +85,7 @@ const Signup = () => {
               </p>
             </form>
           </div>
-  
-          {/* Right side - Image Section */}
-          <div className="w-svw hidden md:block ">
-            <img 
-              src={bgimage} 
-              alt="Background" 
-              className="object-contain h-full w-full rounded-r-lg" 
-            />
-          </div>
+
         </div>
       </div>
     );

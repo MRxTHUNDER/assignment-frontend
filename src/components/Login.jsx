@@ -11,39 +11,37 @@ const Login = () => {
 
   // Check if the user is already logged in
 
-  const handleLogin = async (e) => {
-    // e.preventDefault();
-    // try {
-    //   // Sign in the user using Firebase authentication
-    //   const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const handleLogin = async (e) => {
+        navigate("/dashboard/spoofchecker");
+        // e.preventDefault();
+        // try {
+        //     const response = await fetch("http://localhost:5001/api/login", {
+        //         method: "POST",
+        //         headers: { "Content-Type": "application/json" },
+        //         body: JSON.stringify({ email, password }),
+        //     });
+        //
+        //     const data = await response.json();
+        //     if (response.ok) {
+        //         localStorage.setItem("token", data.token);
+        //         navigate("/dashboard/emailform");
+        //     } else {
+        //         setError(data.message);
+        //     }
+        // } catch (error) {
+        //     setError("An error occurred while logging in.");
+        // }
+    };
 
-    //   // If "Remember Me" is checked, save the user's session in localStorage
-    //   if (rememberMe) {
-    //     localStorage.setItem("rememberedUser", JSON.stringify(userCredential.user));
-    //   }
 
-    //   // Redirect to the dashboard upon successful login
-    navigate("/dashboard/emailform");
-    // } catch (error) {
-    //   if (error instanceof Error) {
-    //     setError(error.message);
-    //   } else {
-    //     setError("An unknown error occurred.");
-    //   }
-    // }
-  };
-
-  return (
+    return (
     <div className="flex h-screen items-center justify-center bg-gray-100">
       <div className="flex w-full max-w-4xl shadow-lg bg-white">
         {/* Left side - Form Section */}
         <div className="w-1/2 p-8">
           <div className="mb-6">
             {/* <img src={Logo} alt="FirstList" className="w-25 h-12 mb-4" /> */}
-            <h1 className="text-4xl font-bold pb-8">
-  <span className="text-purple-400">CONTRO</span>
-  <span className="text-gray-800">SEPTICON</span>
-</h1>
+
             <h2 className="text-3xl font-bold mb-2">Login</h2>
             <p className="text-gray-500">
               Please login to continue with your account
@@ -120,14 +118,6 @@ const Login = () => {
           </form>
         </div>
 
-        {/* Right side - Image Section */}
-        <div className="hidden md:block w-1/2">
-          <img
-            src={bgimage}
-            alt="Background"
-            className="object-cover h-full w-full rounded-r-lg"
-          />
-        </div>
       </div>
     </div>
   );
